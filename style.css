@@ -1,0 +1,24 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+.chatbox {
+    border: 1px solid rgb(0, 0, 0);
+    letter-spacing: 0.5px;
+    flex: 1;
+    flex-direction: column-reverse;
+    overflow: auto;
+    overflow-anchor: auto;
+    display:flex;
+    scroll-behavior: smooth;
+}
+
+.chatbox-messages {
+    display: flex;
+    flex-direction: column;
+}

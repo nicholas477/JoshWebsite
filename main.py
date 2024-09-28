@@ -11,6 +11,9 @@ async def index(request):
 async def chat(request):
     return web.FileResponse('./chat.html')
 
+async def style(request):
+    return web.FileResponse('./style.css')
+
 async def chatjs(request):
     return web.FileResponse('./chat.js')
 
@@ -29,6 +32,7 @@ async def handle_chat(request: Request) -> web.WebSocketResponse:
 app = web.Application()
 app.add_routes([web.get('/', index),
                 web.get('/chat.js', chatjs),
+                web.get('/style.css', style),
                 web.get('/chat/{topic}', handle_chat)])
 
 if __name__ == "__main__":

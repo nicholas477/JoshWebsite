@@ -1,8 +1,8 @@
-const topic = window.location.pathname.split("/").pop()
-console.log(topic)
+const topic = window.location.pathname.split("/").pop();
 const ws = new WebSocket("wss://" + window.location.host + "/chat/" + topic);
 
-document.title = document.title + " " + topic
+document.title = document.title + " " + topic;
+document.getElementById("title").textContent += " " + topic;
 
 ws.onopen = () => {
     console.log("Connected to the WebSocket server");

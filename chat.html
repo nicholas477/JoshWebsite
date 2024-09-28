@@ -2,13 +2,26 @@
 <html>
 <head>
     <title>I'm Down For</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>WebSocket Chat</h1>
-    <div id="chatbox"></div>
-    <input type="text" id="message" placeholder="Type a message...">
-    <button onclick="sendMessage()">Send</button>
+    <h1 id="title">I'm Down For</h1>
+    <div class="chatbox">
+        <div class="chatbox-messages" id="chatbox"></div>
+    </div>
+    <div class="message-send-box">
+        <input onkeydown="checkEnter()" type="text" id="message" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
 
     <script src="/chat.js"></script>
+    <script>
+        function checkEnter() {
+            // Enter
+            if(event.keyCode == 13) {
+                sendMessage();
+            }
+        }
+    </script>
 </body>
 </html>
