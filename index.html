@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I'm Down For</title>
+</head>
+<body>
+    <h1>I'm Down For</h1>
+    <div id="chatbox"></div>
+    <input type="text" id="message" placeholder="">
+    <button onclick="goToChatroom()">Go</button>
+
+    <script>
+        function goToChatroom() {
+            const room = document.getElementById("message").value;
+            window.location.href="chat/" + room;
+        }
+    </script>
+</body>
+</html>
